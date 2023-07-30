@@ -912,7 +912,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     await query.answer(f"Hᴇʏ {query.from_user.first_name}, Tʜɪs Is Nᴏᴛ Yᴏᴜʀ Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ. Rᴇǫᴜᴇsᴛ Yᴏᴜʀ's !", show_alert=True)
             else:
                 if clicked == typed:
-                    await client.send_cached_media(
+                    kait = reply_text("This file Will be deleted after 10 min")
+                    kaithi = await client.send_cached_media(
                         chat_id=query.from_user.id,
                         file_id=file_id,
                         caption=f_caption,
@@ -925,6 +926,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     ]
                         )
                     )
+                    await asyncio.sleep(40)
+                    await kait.delete()
+                    await asyncio.sleep(420)
+                    await kaithi.delete()
+
                 else:
                     await query.answer(f"Hᴇʏ {query.from_user.first_name}, Tʜɪs Is Nᴏᴛ Yᴏᴜʀ Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ. Rᴇǫᴜᴇsᴛ Yᴏᴜʀ's !", show_alert=True)
                 await query.answer('Cʜᴇᴄᴋ PM, I ʜᴀᴠᴇ sᴇɴᴛ ғɪʟᴇs ɪɴ PM', show_alert=True)
@@ -1012,6 +1018,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             caption=f_caption,
             protect_content=True if ident == "checksubp" else False,
         )
+
     elif query.data == "pages":
         await query.answer()
 
