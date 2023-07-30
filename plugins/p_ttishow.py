@@ -163,7 +163,7 @@ async def re_enable_chat(bot, message):
 
 
 @Client.on_message(filters.command('stats') & filters.incoming)
-async def get_stats(bot, message):
+async def get_ststs(bot, message):
     rju = await message.reply('Fetching stats..')
     total_users = await db.total_users_count() * 10
     totl_chats = await db.total_chat_count()
@@ -172,7 +172,7 @@ async def get_stats(bot, message):
     free = 536870912 - size
     size = get_size(size)
     free = get_size(free)
-    await rju.edit(script.STATUS_TXT.format(files, total_chats, size, free))
+    await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
 
 @Client.on_message(filters.command('userc') & filters.user(ADMINS) & filters.incoming)
 async def get_users_count(bot, message):
