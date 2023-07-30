@@ -310,12 +310,11 @@ async def start(client, message):
                     ]
                 )
             )
-            del_text = await message.reply_text("this file will be deleted after 10min")
+            del_txxt = await message.reply_text("⚠️ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 5 ᴍɪɴᴜᴛᴇs\n⭕ᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ғɪʟᴇ sᴏᴍᴇᴡʜᴇʀᴇ ʙᴇғᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ")
             kaith = msg
-            await asyncio.sleep(30)
-            await del_text.delete()
-            await asyncio.sleep(570)
+            await asyncio.sleep(300)
             await kaith.delete()
+            await del_txxt.edit_text("ʏᴏᴜʀ ғɪʟᴇ ᴡᴀs ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ᴀғᴛᴇʀ 5 ᴍɪɴᴜᴛᴇs ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ 📢")
             filesarr.append(msg)
         await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
         return    
@@ -431,12 +430,11 @@ async def start(client, message):
                     ]
         )
     )   
-    del_text = await message.reply_text("this file will be deleted after 10min")
+    del_txxt = await message.reply_text("⚠️ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 5 ᴍɪɴᴜᴛᴇs\n⭕ᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ғɪʟᴇ sᴏᴍᴇᴡʜᴇʀᴇ ʙᴇғᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ")
     kaith = msg
-    await asyncio.sleep(30)
-    await del_text.delete()
-    await asyncio.sleep(570)
+    await asyncio.sleep(300)
     await kaith.delete()
+    await del_txxt.edit_text("ʏᴏᴜʀ ғɪʟᴇ ᴡᴀs ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ᴀғᴛᴇʀ 5 ᴍɪɴᴜᴛᴇs ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ 📢")
     btn = [[
         InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
     ]]
