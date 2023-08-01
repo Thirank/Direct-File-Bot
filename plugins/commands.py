@@ -54,6 +54,16 @@ async def start(client, message):
                     InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="shortlink_info")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        m=await message.reply_sticker("CAACAgUAAxkBAAEJpR9kqvaiXgbk4EizuuDejox8BnH8sQACTgoAAiieWVXgktnkukXk_S8E")
+        await asyncio.sleep(1)
+        await m.delete()
+        loading_text = await message.reply_text("Loading.")
+        await asyncio.sleep(0.5)
+        await loading_text.edit_text("Loading..")
+        await asyncio.sleep(0.5)
+        await loading_text.edit_text("Loading...")
+        await asyncio.sleep(0.5)
+        await loading_text.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
