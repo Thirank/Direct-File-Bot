@@ -1980,7 +1980,7 @@ async def auto_filter(client, msg, spoll=False):
             await message.delete()
             file_closed_del=await message.reply_photo(
             photo=random.choice(CLOSE_IMG),
-            caption=f"<b>ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
+            caption=f"<b>ʜᴇʏ {message.from_user.mention}, Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
             await asyncio.sleep(15)                   
             await file_closed_del.delete()
     except KeyError:
@@ -1990,7 +1990,7 @@ async def auto_filter(client, msg, spoll=False):
         await message.delete()
         file_closed_del=await message.reply_photo(
         photo=random.choice(CLOSE_IMG),
-        caption=f"<b>ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
+        caption=f"<b>ʜᴇʏ {message.from_user.mention}, Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
         await asyncio.sleep(15)                   
         await file_closed_del.delete()
     # if spoll:
