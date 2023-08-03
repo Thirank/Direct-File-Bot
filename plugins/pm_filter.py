@@ -13,7 +13,7 @@ from Script import script
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
-from info import ADMINS, CLOSE_IMG, AUTH_CHANNEL, AUTH_USERS, SUPPORT_CHAT_ID, CUSTOM_FILE_CAPTION, MSG_ALRT, PICS, AUTH_GROUPS, P_TTI_SHOW_OFF, GRP_LNK, CHNL_LNK, NOR_IMG, LOG_CHANNEL, SPELL_IMG, MAX_B_TN, IMDB, \
+from info import ADMINS,CLOSE_IMG, AUTH_CHANNEL, AUTH_USERS, SUPPORT_CHAT_ID, CUSTOM_FILE_CAPTION, MSG_ALRT, PICS, AUTH_GROUPS, P_TTI_SHOW_OFF, GRP_LNK, CHNL_LNK, NOR_IMG, LOG_CHANNEL, SPELL_IMG, MAX_B_TN, IMDB, \
     SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, NO_RESULTS_MSG, TUTORIAL, REQST_CHANNEL, IS_TUTORIAL, LANGUAGES, SEASONS, SUPPORT_CHAT, PREMIUM_USER
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
 from pyrogram import Client, filters, enums
@@ -1978,11 +1978,21 @@ async def auto_filter(client, msg, spoll=False):
             await asyncio.sleep(300)
             await fuk.delete()
             await message.delete()
+            file_closed_del=await message.reply_photo(
+            photo=random.choice(CLOSE_IMG),
+            caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️")
+            await asyncio.sleep(37)                   
+            await file_closed_del.delete()
     except KeyError:
         await save_group_settings(message.chat.id, 'auto_delete', True)
         await asyncio.sleep(300)
         await fuk.delete()
         await message.delete()
+        file_closed_del=await message.reply_photo(
+        photo=random.choice(CLOSE_IMG),
+        caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️")
+        await asyncio.sleep(37)                   
+        await file_closed_del.delete()
     # if spoll:
     #     await msg.message.delete()
 
@@ -2050,9 +2060,8 @@ async def advantage_spell_chok(client, msg):
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply_photo(
-            photo=SPELL_IMG, 
-            caption=script.I_CUDNT.format(mv_rqst),
+        k = await msg.reply_text(
+            text=script.I_CUDNT.format(mv_rqst),
             reply_markup=InlineKeyboardMarkup(button)
         )
         await asyncio.sleep(15)
@@ -2124,17 +2133,11 @@ async def manual_filters(client, message, text=False):
                                         settings = await get_settings(message.chat.id)
                                         if settings['auto_delete']:
                                             await joelkb.delete()
-                                            
                                 else:
                                     try:
                                         if settings['auto_delete']:
                                             await asyncio.sleep(600)
                                             await joelkb.delete()
-                                            file_closed_del=await message.reply_photo(
-                                            photo=random.choice(CLOSE_IMG),
-                                            caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                            await asyncio.sleep(37)                   
-                                            await file_closed_del.delete()
                                     except KeyError:
                                         grpid = await active_connection(str(message.from_user.id))
                                         await save_group_settings(grpid, 'auto_delete', True)
@@ -2142,11 +2145,6 @@ async def manual_filters(client, message, text=False):
                                         if settings['auto_delete']:
                                             await asyncio.sleep(600)
                                             await joelkb.delete()
-                                            file_closed_del=await message.reply_photo(
-                                            photo=random.choice(CLOSE_IMG),
-                                            caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                            await asyncio.sleep(37)                   
-                                            await file_closed_del.delete()
                             except KeyError:
                                 grpid = await active_connection(str(message.from_user.id))
                                 await save_group_settings(grpid, 'auto_ffilter', True)
@@ -2181,11 +2179,6 @@ async def manual_filters(client, message, text=False):
                                         if settings['auto_delete']:
                                             await asyncio.sleep(600)
                                             await joelkb.delete()
-                                            file_closed_del=await message.reply_photo(
-                                            photo=random.choice(CLOSE_IMG),
-                                            caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                            await asyncio.sleep(37)                   
-                                            await file_closed_del.delete()
                                     except KeyError:
                                         grpid = await active_connection(str(message.from_user.id))
                                         await save_group_settings(grpid, 'auto_delete', True)
@@ -2193,11 +2186,6 @@ async def manual_filters(client, message, text=False):
                                         if settings['auto_delete']:
                                             await asyncio.sleep(600)
                                             await joelkb.delete()
-                                            file_closed_del=await message.reply_photo(
-                                            photo=random.choice(CLOSE_IMG),
-                                            caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                            await asyncio.sleep(37)                   
-                                            await file_closed_del.delete()
                             except KeyError:
                                 grpid = await active_connection(str(message.from_user.id))
                                 await save_group_settings(grpid, 'auto_ffilter', True)
@@ -2230,12 +2218,6 @@ async def manual_filters(client, message, text=False):
                                     if settings['auto_delete']:
                                         await asyncio.sleep(600)
                                         await joelkb.delete()
-                                        file_closed_del=await message.reply_photo(
-                                        photo=random.choice(CLOSE_IMG),
-                                        caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                        await asyncio.sleep(37)                   
-                                        await file_closed_del.delete()
-                                        
                                 except KeyError:
                                     grpid = await active_connection(str(message.from_user.id))
                                     await save_group_settings(grpid, 'auto_delete', True)
@@ -2243,11 +2225,6 @@ async def manual_filters(client, message, text=False):
                                     if settings['auto_delete']:
                                         await asyncio.sleep(600)
                                         await joelkb.delete()
-                                        file_closed_del=await message.reply_photo(
-                                        photo=random.choice(CLOSE_IMG),
-                                        caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                        await asyncio.sleep(37)                   
-                                        await file_closed_del.delete()
                         except KeyError:
                             grpid = await active_connection(str(message.from_user.id))
                             await save_group_settings(grpid, 'auto_ffilter', True)
@@ -2280,11 +2257,6 @@ async def manual_filters(client, message, text=False):
                                     if settings['auto_delete']:
                                         await asyncio.sleep(600)
                                         await joelkb.delete()
-                                        file_closed_del=await message.reply_photo(
-                                        photo=random.choice(CLOSE_IMG),
-                                        caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                        await asyncio.sleep(37)                   
-                                        await file_closed_del.delete()
                                 except KeyError:
                                     grpid = await active_connection(str(message.from_user.id))
                                     await save_group_settings(grpid, 'auto_delete', True)
@@ -2292,11 +2264,6 @@ async def manual_filters(client, message, text=False):
                                     if settings['auto_delete']:
                                         await asyncio.sleep(600)
                                         await joelkb.delete()
-                                        file_closed_del=await message.reply_photo(
-                                        photo=random.choice(CLOSE_IMG),
-                                        caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                        await asyncio.sleep(37)                   
-                                        await file_closed_del.delete()
                         except KeyError:
                             grpid = await active_connection(str(message.from_user.id))
                             await save_group_settings(grpid, 'auto_ffilter', True)
@@ -2354,11 +2321,6 @@ async def global_filters(client, message, text=False):
                                             if settings['auto_delete']:
                                                 await asyncio.sleep(600)
                                                 await joelkb.delete()
-                                                file_closed_del=await message.reply_photo(
-                                                photo=random.choice(CLOSE_IMG),
-                                                caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                                await asyncio.sleep(37)                   
-                                                await file_closed_del.delete()
                                         except KeyError:
                                             grpid = await active_connection(str(message.from_user.id))
                                             await save_group_settings(grpid, 'auto_delete', True)
@@ -2366,11 +2328,6 @@ async def global_filters(client, message, text=False):
                                             if settings['auto_delete']:
                                                 await asyncio.sleep(600)
                                                 await joelkb.delete()
-                                                file_closed_del=await message.reply_photo(
-                                                photo=random.choice(CLOSE_IMG),
-                                                caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                                await asyncio.sleep(37)                   
-                                                await file_closed_del.delete()
                                 except KeyError:
                                     grpid = await active_connection(str(message.from_user.id))
                                     await save_group_settings(grpid, 'auto_ffilter', True)
@@ -2417,11 +2374,6 @@ async def global_filters(client, message, text=False):
                                             if settings['auto_delete']:
                                                 await asyncio.sleep(600)
                                                 await joelkb.delete()
-                                                file_closed_del=await message.reply_photo(
-                                                photo=random.choice(CLOSE_IMG),
-                                                caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                                await asyncio.sleep(37)                   
-                                                await file_closed_del.delete()
                                         except KeyError:
                                             grpid = await active_connection(str(message.from_user.id))
                                             await save_group_settings(grpid, 'auto_delete', True)
@@ -2429,11 +2381,6 @@ async def global_filters(client, message, text=False):
                                             if settings['auto_delete']:
                                                 await asyncio.sleep(600)
                                                 await joelkb.delete()
-                                                file_closed_del=await message.reply_photo(
-                                                photo=random.choice(CLOSE_IMG),
-                                                caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                                await asyncio.sleep(37)                   
-                                                await file_closed_del.delete()
                                 except KeyError:
                                     grpid = await active_connection(str(message.from_user.id))
                                     await save_group_settings(grpid, 'auto_ffilter', True)
@@ -2478,11 +2425,6 @@ async def global_filters(client, message, text=False):
                                         if settings['auto_delete']:
                                             await asyncio.sleep(600)
                                             await joelkb.delete()
-                                            file_closed_del=await message.reply_photo(
-                                            photo=random.choice(CLOSE_IMG),
-                                            caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                            await asyncio.sleep(37)                   
-                                            await file_closed_del.delete()
                                     except KeyError:
                                         grpid = await active_connection(str(message.from_user.id))
                                         await save_group_settings(grpid, 'auto_delete', True)
@@ -2490,11 +2432,6 @@ async def global_filters(client, message, text=False):
                                         if settings['auto_delete']:
                                             await asyncio.sleep(600)
                                             await joelkb.delete()
-                                            file_closed_del=await message.reply_photo(
-                                            photo=random.choice(CLOSE_IMG),
-                                            caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                            await asyncio.sleep(37)                   
-                                            await file_closed_del.delete()
                             except KeyError:
                                 grpid = await active_connection(str(message.from_user.id))
                                 await save_group_settings(grpid, 'auto_ffilter', True)
@@ -2540,11 +2477,6 @@ async def global_filters(client, message, text=False):
                                         if settings['auto_delete']:
                                             await asyncio.sleep(600)
                                             await joelkb.delete()
-                                            file_closed_del=await message.reply_photo(
-                                            photo=random.choice(CLOSE_IMG),
-                                            caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                            await asyncio.sleep(37)                   
-                                            await file_closed_del.delete()
                                     except KeyError:
                                         grpid = await active_connection(str(message.from_user.id))
                                         await save_group_settings(grpid, 'auto_delete', True)
@@ -2552,11 +2484,6 @@ async def global_filters(client, message, text=False):
                                         if settings['auto_delete']:
                                             await asyncio.sleep(600)
                                             await joelkb.delete()
-                                            file_closed_del=await message.reply_photo(
-                                            photo=random.choice(CLOSE_IMG),
-                                            caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {message.text} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-                                            await asyncio.sleep(37)                   
-                                            await file_closed_del.delete()
                             except KeyError:
                                 grpid = await active_connection(str(message.from_user.id))
                                 await save_group_settings(grpid, 'auto_ffilter', True)
