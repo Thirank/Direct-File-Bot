@@ -1981,7 +1981,7 @@ async def auto_filter(client, msg, spoll=False):
             file_closed_del=await message.reply_photo(
             photo=random.choice(CLOSE_IMG),
             caption=f"<b>ʜᴇʏ {message.from_user.mention}, Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
-            await asyncio.sleep(15)                   
+            await asyncio.sleep(37)                   
             await file_closed_del.delete()
     except KeyError:
         await save_group_settings(message.chat.id, 'auto_delete', True)
@@ -1991,7 +1991,7 @@ async def auto_filter(client, msg, spoll=False):
         file_closed_del=await message.reply_photo(
         photo=random.choice(CLOSE_IMG),
         caption=f"<b>ʜᴇʏ {message.from_user.mention}, Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️</b>")
-        await asyncio.sleep(15)                   
+        await asyncio.sleep(37)                   
         await file_closed_del.delete()
     # if spoll:
     #     await msg.message.delete()
