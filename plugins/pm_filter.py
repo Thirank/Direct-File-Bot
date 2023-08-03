@@ -1981,7 +1981,7 @@ async def auto_filter(client, msg, spoll=False):
             file_closed_del=await message.reply_photo(
             photo=random.choice(CLOSE_IMG),
             caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-            await asyncio.sleep(37)                   
+            await asyncio.sleep(15)                   
             await file_closed_del.delete()
     except KeyError:
         await save_group_settings(message.chat.id, 'auto_delete', True)
@@ -1991,7 +1991,7 @@ async def auto_filter(client, msg, spoll=False):
         file_closed_del=await message.reply_photo(
         photo=random.choice(CLOSE_IMG),
         caption=f"ʜᴇʏ {message.from_user.mention} Fɪʟᴛᴇʀ Fᴏʀ {search} ɪs Cʟᴏꜱᴇᴅ 🗑️")
-        await asyncio.sleep(37)                   
+        await asyncio.sleep(15)                   
         await file_closed_del.delete()
     # if spoll:
     #     await msg.message.delete()
@@ -2022,9 +2022,8 @@ async def advantage_spell_chok(client, msg):
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply_photo(
-            photo=SPELL_IMG, 
-            caption=script.I_CUDNT.format(mv_rqst),
+        k = await msg.reply_text(
+            text=script.I_CUDNT.format(mv_rqst),
             reply_markup=InlineKeyboardMarkup(button)
         )
         await asyncio.sleep(30)
@@ -2076,9 +2075,8 @@ async def advantage_spell_chok(client, msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spol#{reqstr1}#close_spellcheck')])
-    spell_check_del = await msg.reply_photo(
-        photo=(SPELL_IMG),
-        caption=(script.CUDNT_FND.format(mv_rqst)),
+    spell_check_del = await msg.reply_text(
+        text=(script.CUDNT_FND.format(mv_rqst)),
         reply_markup=InlineKeyboardMarkup(btn)
     )
     try:
