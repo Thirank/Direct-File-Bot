@@ -181,7 +181,10 @@ async def get_users_count(bot, message):
     users_count = await db.total_users_count()
     chat_count = await db.total_chat_count()
     size = await db.get_db_size()
-    await message.reply(f"Total users count: {users_count}\n Total chat count: {chat_count} \n Total Used storage: {size}")
+    free = 536870912 - size
+    size = get_size(size)
+    free = get_size(free)    
+    await message.reply(f"Total users count: {users_count}\n Total chat count: {chat_count} \n Total Used storage: {size} \n Free Storage : {free}")
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
 async def gen_invite(bot, message):
