@@ -346,7 +346,9 @@ async def start(client, message):
                             InlineKeyboardButton('ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ', url=g)
                         ], [
                             InlineKeyboardButton('Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ?', url=await get_tutorial(chat_id))
-                        ]
+                        ], [
+                            InlineKeyboardButton('🔐 Close', callback_data='close_data')
+                        ],
                     ]
                 )
             )
