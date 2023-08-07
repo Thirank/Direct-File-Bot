@@ -1588,9 +1588,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     
     elif query.data == "admin":
-        user_id = query.from_user.id
-        is_admin = user_id in ADMINS
-    if is_admin:
+        
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='extra')
         ]]
@@ -1605,10 +1603,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    if not is_admin:
-        # If the user is not an admin, show an alert message
-        await query.answer("ᴛʜɪs ɪs ɴᴏᴛ ғᴏʀ ʏᴏᴜ 😂\nʏᴏᴜ ᴀʀᴇɴ'ᴛ ᴛʜᴇ ᴀᴅᴍɪɴ😕", show_alert=True)    
-        
+    
     elif query.data == "stats":
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help'),
