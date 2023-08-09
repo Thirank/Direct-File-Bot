@@ -5,90 +5,104 @@
   @Wanda_Ki_Shakti_Bot
 </h1>
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?linesWelcome+To+Wanda+ki+Shakti+Bot;A+Simple+And+Very+Powerful+Bot!;A+Bot+With+Text+Filter+Mode;Indexes+Files+Above+4GB;Start+Message+With+Pic!;And+Many+More+Features!)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+Wanda+ki+Shakti+Bot;A+Simple+And+Very+Powerful+Bot!;A+Bot+With+Text+Filter+Mode;Pm+Shortner+Mode;Language+and+season+choosing+button+in+search+mode;Tutorial+adding+mode;Indexes+Files+Above+2GB;Start+Message+With+Pic!;And+Many+More+Features!)
 </p>
 
-## 𝐹𝑒𝑎𝑡𝑢𝑟𝑒𝑠
-- [x] 𝐼𝑀𝐷𝐵 𝑇𝑒𝑚𝑝𝑙𝑎𝑡𝑒 𝑆𝑒𝑡
-- [x] 𝐼𝑛𝑑𝑒𝑥𝑒𝑠 𝐹𝑖𝑙𝑒𝑠 𝑎𝑏𝑜𝑣𝑒 2𝐺𝐵
-- [x] 𝑃𝑟𝑒𝐷𝑉𝐷 𝑎𝑛𝑑 𝐶𝑎𝑚𝑅𝑖𝑝 𝐷𝑒𝑙𝑒𝑡𝑒 𝑀𝑜𝑑𝑒
-- [x] 𝑀𝑢𝑙𝑡𝑖𝑝𝑙𝑒 𝐹𝑖𝑙𝑒 𝐷𝑒𝑙𝑒𝑡𝑖𝑜𝑛
-- [x] 𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠 𝑀𝑒𝑛𝑢
-- [x] 𝐹𝑜𝑟𝑐𝑒 𝑆𝑢𝑏𝑠𝑐𝑟𝑖𝑝𝑡𝑖𝑜𝑛
-- [x] 𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑀𝑒𝑠𝑠𝑎𝑔𝑒
-- [x] 𝐴𝑢𝑡𝑜𝑚𝑎𝑡𝑖𝑐 𝐹𝑖𝑙𝑒 𝐹𝑖𝑙𝑡𝑒𝑟𝑖𝑛𝑔
-- [x] 𝐷𝑜𝑢𝑏𝑙𝑒 𝐹𝑖𝑙𝑡𝑒𝑟 𝐵𝑢𝑡𝑡𝑜𝑛
-- [x] 𝑆𝑖𝑛𝑔𝑙𝑒 𝐹𝑖𝑙𝑡𝑒𝑟 𝐵𝑢𝑡𝑡𝑜𝑛
-- [x] 𝐵𝑜𝑡 𝑃𝑀 𝐹𝑖𝑙𝑒 𝑆𝑒𝑛𝑑 𝑀𝑜𝑑𝑒
-- [x] 𝐴𝑢𝑡𝑜 𝐹𝑖𝑙𝑒 𝑆𝑒𝑛𝑑
-- [x] 𝐹𝑜𝑟𝑤𝑎𝑟𝑑 𝑅𝑒𝑠𝑡𝑟𝑖𝑐𝑡𝑖𝑜𝑛
-- [x] 𝐹𝑖𝑙𝑒 𝑃𝑟𝑜𝑡𝑒𝑐𝑡
-- [x] 𝑀𝑎𝑛𝑢𝑎𝑙 𝐹𝑖𝑙𝑒 𝐹𝑖𝑙𝑡𝑒𝑟𝑖𝑛𝑔
-- [x] 𝐺𝑙𝑜𝑏𝑎𝑙 𝐹𝑖𝑙𝑒 𝐹𝑖𝑙𝑡𝑒𝑟𝑖𝑛𝑔
-- [x] 𝐼𝑀𝐷𝐵
-- [x] 𝐴𝑑𝑚𝑖𝑛 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠
-- [x] 𝑈𝑠𝑒𝑟 𝐵𝑟𝑜𝑎𝑑𝑐𝑎𝑠𝑡
-- [x] 𝐺𝑟𝑜𝑢𝑝 𝐵𝑟𝑜𝑎𝑑𝑐𝑎𝑠𝑡
-- [x] 𝐼𝑛𝑑𝑒𝑥
-- [x] 𝐼𝑀𝐷𝐵 𝑠𝑒𝑎𝑟𝑐ℎ
-- [x] 𝐼𝑛𝑙𝑖𝑛𝑒 𝑆𝑒𝑎𝑟𝑐ℎ
-- [x] 𝑅𝑎𝑛𝑑𝑜𝑚 𝑝𝑖𝑐𝑠
-- [x] 𝑖𝑑𝑠 𝑎𝑛𝑑 𝑈𝑠𝑒𝑟 𝑖𝑛𝑓𝑜 
-- [x] 𝑆𝑡𝑎𝑡𝑠
-- [x] 𝑈𝑠𝑒𝑟𝑠
-- [x] 𝐶ℎ𝑎𝑡𝑠
-- [x] 𝑈𝑠𝑒𝑟 𝐵𝑎𝑛
-- [x] 𝑈𝑠𝑒𝑟 𝑈𝑛𝑏𝑎𝑛
-- [x] 𝐶ℎ𝑎𝑡 𝐿𝑒𝑎𝑣𝑒
-- [x] 𝐶ℎ𝑎𝑡 𝐷𝑖𝑠𝑎𝑏𝑙𝑒
-- [x] 𝐶ℎ𝑎𝑛𝑛𝑒𝑙
-- [x] 𝑆𝑝𝑒𝑙𝑙𝑖𝑛𝑔 𝐶ℎ𝑒𝑐𝑘 𝐹𝑒𝑎𝑡𝑢𝑟𝑒
-- [x] 𝐹𝑖𝑙𝑒 𝑆𝑡𝑜𝑟𝑒
-- [x] 𝐴𝑢𝑡𝑜 𝐷𝑒𝑙𝑒𝑡𝑒
-- [x] 𝐴𝑛𝑑 𝑀𝑜𝑟𝑒...
+## 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀 🔉
+- [x] Text Filter Mode
+- [x] Season button in search mode (users can choose their season 1 - 10)
+- [x] Language Button in search mode (users can choose language of their files)
+- [x] Pm shortlink convert mode
+- [x] Shortner mode available 
+- [x] Group admin Can select their shortner site and Tutorial Video
+- [x] IMDB Template Set
+- [x] Indexes Files above 2GB
+- [x] PreDVD and CamRip Delete Mode
+- [x] Multiple File Deletion
+- [x] Settings Menu
+- [x] Force Subscription
+- [x] Welcome Message
+- [x] Automatic File Filtering
+- [x] Double Filter Button
+- [x] Single Filter Button
+- [x] Bot PM File Send Mode
+- [x] Auto File Send
+- [x] Forward Restriction
+- [x] File Protection
+- [x] Manual File Filtering
+- [x] Global File Filtering
+- [x] IMDB
+- [x] Admin Commands
+- [x] User Broadcast
+- [x] Group Broadcast
+- [x] Index
+- [x] IMDB Search
+- [x] Inline Search
+- [x] Forward Restrictions
+- [x] IMDB search
+- [x] Inline Search
+- [x] Random pics
+- [x] ids and User info
+- [x] Status
+- [x] Users
+- [x] Chats
+- [x] User Ban
+- [x] User Unban
+- [x] Channel Leave
+- [x] Channel Disable
+- [x] Channel Enable
+- [x] Channel List
+- [x] Broadcast Message
+- [x] Group Broadcast Message
+- [x] Indexing
+- [x] Add Filter
+- [x] Remove Filter
+- [x] And More...
 
 <b>Hᴇʀᴇ Is A <a href='https://t.me/Wanda_Ki_Shakti_Bot'>Bᴏᴛ Sᴀᴍᴘʟᴇ ❤️‍🔥</a>.</b>
 
-## 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠
+## 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 (𝗖𝗼𝗽𝘆 𝗙𝗼𝗿 𝗕𝗼𝘁 𝗳𝗮𝘁𝗵𝗲𝗿) 🥶
 ```
-• /invite - 𝑡𝑜 𝑔𝑒𝑡 𝑡ℎ𝑒 𝑖𝑛𝑣𝑖𝑡𝑒 𝑙𝑖𝑛𝑘 𝑜𝑓 𝑎𝑛𝑦 𝑐ℎ𝑎𝑡 𝑤ℎ𝑖𝑐ℎ 𝑡ℎ𝑒 𝑏𝑜𝑡 𝑖𝑠 𝑎𝑑𝑚𝑖𝑛.
-• /logs - 𝑡𝑜 𝑔𝑒𝑡 𝑡ℎ𝑒 𝑟𝑒𝑠𝑐𝑒𝑛𝑡 𝑒𝑟𝑟𝑜𝑟𝑠
-• /stats - 𝑡𝑜 𝑔𝑒𝑡 𝑠𝑡𝑎𝑡𝑢𝑠 𝑜𝑓 𝑓𝑖𝑙𝑒𝑠 𝑖𝑛 𝑑𝑏.
-• /connections - 𝑇𝑜 𝑠𝑒𝑒 𝑎𝑙𝑙 𝑐𝑜𝑛𝑛𝑒𝑐𝑡𝑒𝑑 𝑔𝑟𝑜𝑢𝑝𝑠
-• /settings - 𝑇𝑜 𝑜𝑝𝑒𝑛 𝑠𝑒𝑡𝑡𝑖𝑛𝑔𝑠 𝑚𝑒𝑛𝑢
-• /filter - 𝑎𝑑𝑑 𝑚𝑎𝑛𝑢𝑎𝑙 𝑓𝑖𝑙𝑡𝑒𝑟𝑠
-• /filters - 𝑣𝑖𝑒𝑤 𝑓𝑖𝑙𝑡𝑒𝑟𝑠
-• /connect - 𝑐𝑜𝑛𝑛𝑒𝑐𝑡 𝑡𝑜 𝑃𝑀.
-• /disconnect - 𝑑𝑖𝑠𝑐𝑜𝑛𝑛𝑒𝑐𝑡 𝑓𝑟𝑜𝑚 𝑃𝑀
-• /del - 𝑑𝑒𝑙𝑒𝑡𝑒 𝑎 𝑓𝑖𝑙𝑡𝑒𝑟
-• /delall - 𝑑𝑒𝑙𝑒𝑡𝑒 𝑎𝑙𝑙 𝑓𝑖𝑙𝑡𝑒𝑟𝑠
-• /deleteall - 𝑑𝑒𝑙𝑒𝑡𝑒 𝑎𝑙𝑙 𝑖𝑛𝑑𝑒𝑥𝑒𝑑 𝑓𝑖𝑙𝑒𝑠.
-• /delete - 𝑑𝑒𝑙𝑒𝑡𝑒 𝑎 𝑠𝑝𝑒𝑐𝑖𝑓𝑖𝑐 𝑓𝑖𝑙𝑒 𝑓𝑟𝑜𝑚 𝑖𝑛𝑑𝑒𝑥.
-• /info - 𝑔𝑒𝑡 𝑢𝑠𝑒𝑟 𝑖𝑛𝑓𝑜
-• /id - 𝑔𝑒𝑡 𝑡𝑔 𝑖𝑑𝑠.
-• /imdb - 𝑓𝑒𝑡𝑐ℎ 𝑖𝑛𝑓𝑜 𝑓𝑟𝑜𝑚 𝑖𝑚𝑑𝑏.
-• /search - 𝑇𝑜 𝑠𝑒𝑎𝑟𝑐ℎ 𝑓𝑟𝑜𝑚 𝑣𝑎𝑟𝑖𝑜𝑢𝑠 𝑠𝑜𝑢𝑟𝑐𝑒𝑠
-• /start - 𝑇𝑜 𝑠𝑡𝑎𝑟𝑡 𝑡ℎ𝑒 𝑏𝑜𝑡
-• /setskip - 𝑇𝑜 𝑠𝑘𝑖𝑝 𝑛𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑚𝑒𝑠𝑠𝑎𝑔𝑒𝑠 𝑤ℎ𝑒𝑛 𝑖𝑛𝑑𝑒𝑥𝑖𝑛𝑔 𝑓𝑖𝑙𝑒𝑠
-• /users - 𝑡𝑜 𝑔𝑒𝑡 𝑙𝑖𝑠𝑡 𝑜𝑓 𝑚𝑦 𝑢𝑠𝑒𝑟𝑠 𝑎𝑛𝑑 𝑖𝑑𝑠.
-• /chats - 𝑡𝑜 𝑔𝑒𝑡 𝑙𝑖𝑠𝑡 𝑜𝑓 𝑡ℎ𝑒 𝑚𝑦 𝑐ℎ𝑎𝑡𝑠 𝑎𝑛𝑑 𝑖𝑑𝑠 
-• /leave  - 𝑡𝑜 𝑙𝑒𝑎𝑣𝑒 𝑓𝑟𝑜𝑚 𝑎 𝑐ℎ𝑎𝑡.
-• /disable  -  𝑑𝑜 𝑑𝑖𝑠𝑎𝑏𝑙𝑒 𝑎 𝑐ℎ𝑎𝑡.
-• /enable - 𝑟𝑒-𝑒𝑛𝑎𝑏𝑙𝑒 𝑐ℎ𝑎𝑡.
-• /ban  - 𝑡𝑜 𝑏𝑎𝑛 𝑎 𝑢𝑠𝑒𝑟.
-• /unban  - 𝑡𝑜 𝑢𝑛𝑏𝑎𝑛 𝑎 𝑢𝑠𝑒𝑟.
-• /channel - 𝑡𝑜 𝑔𝑒𝑡 𝑙𝑖𝑠𝑡 𝑜𝑓 𝑡𝑜𝑡𝑎𝑙 𝑐𝑜𝑛𝑛𝑒𝑐𝑡𝑒𝑑 𝑐ℎ𝑎𝑛𝑛𝑒𝑙𝑠
-• /broadcast - 𝑡𝑜 𝑏𝑟𝑜𝑎𝑑𝑐𝑎𝑠𝑡 𝑎 𝑚𝑒𝑠𝑠𝑎𝑔𝑒 𝑡𝑜 𝑎𝑙𝑙 𝑢𝑠𝑒𝑟𝑠
-• /grp_broadcast - 𝑇𝑜 𝑏𝑟𝑜𝑎𝑑𝑐𝑎𝑠𝑡 𝑎 𝑚𝑒𝑠𝑠𝑎𝑔𝑒 𝑡𝑜 𝑎𝑙𝑙 𝑐𝑜𝑛𝑛𝑒𝑐𝑡𝑒𝑑 𝑔𝑟𝑜𝑢𝑝𝑠.
-• /batch - 𝑡𝑜 𝑐𝑟𝑒𝑎𝑡𝑒 𝑙𝑖𝑛𝑘 𝑓𝑜𝑟 𝑚𝑢𝑙𝑡𝑖𝑝𝑙𝑒 𝑝𝑜𝑠𝑡𝑠
-• /link - 𝑡𝑜 𝑐𝑟𝑒𝑎𝑡𝑒 𝑙𝑖𝑛𝑘 𝑓𝑜𝑟 𝑜𝑛𝑒 𝑝𝑜𝑠𝑡
-• /status - 𝑌𝑜𝑢𝑟 𝐻𝑒𝑟𝑜𝑘𝑢 𝐴𝑃𝐼 𝐾𝑒𝑦 𝑡𝑜 𝑐ℎ𝑒𝑐𝑘 𝑑𝑦𝑛𝑜, 𝑏𝑜𝑡 𝑢𝑝𝑡𝑖𝑚𝑒 𝑎𝑛𝑑 𝑏𝑜𝑡 𝑤𝑜𝑟𝑘𝑖𝑛𝑔 𝑑𝑎𝑦 𝑝𝑟𝑒𝑑𝑖𝑐𝑡𝑖𝑜𝑛.
-• /set_template - 𝑇𝑜 𝑠𝑒𝑡 𝑎 𝑐𝑢𝑠𝑡𝑜𝑚 𝐼𝑀𝐷𝑏 𝑡𝑒𝑚𝑝𝑙𝑎𝑡𝑒 𝑓𝑜𝑟 𝑖𝑛𝑑𝑖𝑣𝑖𝑑𝑢𝑎𝑙 𝑔𝑟𝑜𝑢𝑝𝑠
-• /gfilter - 𝑇𝑜 𝑎𝑑𝑑 𝑔𝑙𝑜𝑏𝑎𝑙 𝑓𝑖𝑙𝑡𝑒𝑟𝑠.
-• /gfilters - 𝑇𝑜 𝑣𝑖𝑒𝑤 𝑙𝑖𝑠𝑡 𝑜𝑓 𝑎𝑙𝑙 𝑔𝑙𝑜𝑏𝑎𝑙 𝑓𝑖𝑙𝑡𝑒𝑟𝑠.
-• /delg - 𝑇𝑜 𝑑𝑒𝑙𝑒𝑡𝑒 𝑎 𝑠𝑝𝑒𝑐𝑖𝑓𝑖𝑐 𝑔𝑙𝑜𝑏𝑎𝑙 𝑓𝑖𝑙𝑡𝑒𝑟.
-• /delallg - 𝑇𝑜 𝑑𝑒𝑙𝑒𝑡𝑒 𝑎𝑙𝑙 𝑔𝑙𝑜𝑏𝑎𝑙 𝑓𝑖𝑙𝑡𝑒𝑟𝑠 𝑓𝑟𝑜𝑚 𝑡ℎ𝑒 𝑏𝑜𝑡'𝑠 𝑑𝑎𝑡𝑎𝑏𝑎𝑠𝑒.
-• /deletefiles - 𝑇𝑜 𝑑𝑒𝑙𝑒𝑡𝑒 𝑃𝑟𝑒𝐷𝑉𝐷 𝑎𝑛𝑑 𝐶𝑎𝑚𝑅𝑖𝑝 𝐹𝑖𝑙𝑒𝑠 𝑓𝑟𝑜𝑚 𝑡ℎ𝑒 𝑏𝑜𝑡'𝑠 𝑑𝑎𝑡𝑎𝑏𝑎𝑠𝑒.
+start - To start the bot
+shortlink - to connect your shortner
+tutorial - to set your tutorial link
+stats - to get statuses of files in db.
+connections - To see all connected groups
+settings - To open settings menu
+filter - add manual filters
+filters - view filters
+connect - connect to PM.
+disconnect - disconnect from PM
+invite - to get the invite link of any chat which the bot is admin.
+del - delete a filter
+delall - delete all filters
+deleteall - delete all indexed files.(admin)
+delete - delete a specific file from index.(admin)
+info - get user info
+id - get tg ids.
+imdb - fetch info from imdb.
+search - To search from various sources
+setskip - To skip number of messages when indexing files
+users - to get list of my users and ids.
+chats - to get list of my chats and ids
+leave - to leave from a chat.(admin)
+disable - do disable a chat.
+enable - re-enable chat.
+ban - to ban a user.(admin)
+unban - to unban a user.(admin)
+channel - to get list of total connected channels
+broadcast - to broadcast a message to all users(admin)
+grp_broadcast - To broadcast a message to all connected groups.(admin)
+batch - to create link for multiple posts
+link - to create link for one post
+status - Your Heroku API Key to check dyno, bot uptime and bot working day prediction.
+set_template - To set a custom IMDB template for individual groups
+gfilter - To add global filters.
+gfilters - To view list of all global filters.
+delg - To delete a specific global filter.
+delallg - To delete all global filters from the bot's database.
+deletefiles - To delete PRE-DVD and CamRip Files from the bot's database.(admin)
+logs - to get the recent errors
 ```
 
 ## Variables
