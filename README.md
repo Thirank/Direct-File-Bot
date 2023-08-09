@@ -5,7 +5,7 @@
   @Wanda_Ki_Shakti_Bot
 </h1>
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Wᴇʟᴄᴏᴍᴇ+Tᴏ+Wᴀɴᴅᴀ+ᴋɪ+Sʜᴀᴋᴛɪ+Bᴏᴛ;A+Sɪᴍᴘʟᴇ+Aɴᴅ+Vᴇʀʏ+PᴏᴡᴇʀFᴜʟʟ+Bᴏᴛ!;A+Bᴏᴛ+Wɪᴛʜ+Tᴇxᴛ+Fɪʟᴛᴇʀ+Mᴏᴅᴇ;Iɴᴅᴇxᴇs+Fɪʟᴇs+Aʙᴏᴠᴇ+4Gʙ;Sᴛᴀʀᴛ+Mᴇssᴀɢᴇ+Wɪᴛʜ+Pɪᴄ!;Aɴᴅ+Mᴀɴʏ+Mᴏʀᴇ+Fᴇᴀᴛᴜʀᴇs!)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?linesWelcome+To+Wanda+ki+Shakti+Bot;A+Simple+And+Very+Powerful+Bot!;A+Bot+With+Text+Filter+Mode;Indexes+Files+Above+4GB;Start+Message+With+Pic!;And+Many+More+Features!)
 </p>
 
 ## 𝐹𝑒𝑎𝑡𝑢𝑟𝑒𝑠
