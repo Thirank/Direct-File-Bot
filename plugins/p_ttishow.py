@@ -106,19 +106,25 @@ async def leave_a_chat(bot, message):
     except Exception as e:
         await message.reply(f'Error - {e}')
 
-@Client.on_message(filters.command('leavegp') & filters.user(ADMINS))
+@Client.on_message(filters.command('leaveif') & filters.user(ADMINS))
 async def leave_if_less(bot, message):
-    async for chat in bot.iter_dialogs():
-        if chat.chat.type in ["supergroup", "group"]:
-            members_count = chat.chat.members_count
-            if members_count < 20:
-                try:
-                    await bot.send_message(chat.chat.id, "I left the chat because it had less than 50 members.")
-                    await chat.chat.leave()
-                    await message.reply(f"Left the group with less than 20 members: {chat.chat.id}")
-                except Exception as e:
-                    await message.reply(f"Error leaving the group {chat.chat.id}: {e}")
-    await message.reply("Finished leaving groups with less than 20 members.")
+    try:
+        dialogs = await bot.get_dialogs(limit=None)
+        for dialog in dialogs:
+            chat = dialog.chat
+            if chat.type in ["supergroup", "group"]:
+                members_count = chat.members_count
+                if members_count < 20:
+                    try:
+                        await bot.send_message(chat.id, "I left the chat because it had less than 20 members.")
+                        await chat.leave()
+                        await message.reply(f"Left the group with less than 20 members: {chat.id}")
+                    except Exception as e:
+                        await message.reply(f"Error leaving the group {chat.id}: {e}")
+        await message.reply("Finished leaving groups with less than 20 members.")
+    except Exception as e:
+        await message.reply(f"An error occurred: {e}")
+
 
 
 @Client.on_message(filters.command('disable') & filters.user(ADMINS))
