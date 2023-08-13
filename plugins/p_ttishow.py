@@ -109,8 +109,7 @@ async def leave_a_chat(bot, message):
 @Client.on_message(filters.command('leaveif') & filters.user(ADMINS))
 async def leave_if_less(bot, message):
     try:
-        dialogs = await bot.get_dialogs(limit=None)
-        for dialog in dialogs:
+        async for dialog in bot.iter_dialogs():
             chat = dialog.chat
             if chat.type in ["supergroup", "group"]:
                 members_count = chat.members_count
