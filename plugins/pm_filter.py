@@ -430,16 +430,16 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             ]
             for file in files
         ]
-        btn.insert(0, 
-        [
-            InlineKeyboardButton("‼️ Cʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ‼️", callback_data=f"languages#{key}"),
-        ]
-    )
-        btn.insert(1,
-        [
-            InlineKeyboardButton("🥶 Cʜᴏᴏsᴇ Sᴇᴀsᴏɴ 🥶", callback_data=f"seasons#{key}")
-        ]
-    )
+#       btn.insert(0, 
+#       [
+#           InlineKeyboardButton("‼️ Cʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ‼️", callback_data=f"languages#{key}"),
+#       ]
+#   )
+#       btn.insert(1,
+#       [
+#            InlineKeyboardButton("🥶 Cʜᴏᴏsᴇ Sᴇᴀsᴏɴ 🥶", callback_data=f"seasons#{key}")
+#        ]
+#   )
 
     else:
         btn = []
@@ -469,6 +469,16 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
 #   btn.insert(0, [
 #      InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}")
 # ])
+        btn.insert(0, 
+        [
+            InlineKeyboardButton("‼️ Cʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ‼️", callback_data=f"languages#{key}"),
+        ]
+    )
+        btn.insert(1,
+        [
+            InlineKeyboardButton("🥶 Cʜᴏᴏsᴇ Sᴇᴀsᴏɴ 🥶", callback_data=f"seasons#{key}")
+        ]
+    )
     
     # else:
     #     btn.insert(0, [
