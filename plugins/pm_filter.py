@@ -1439,7 +1439,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ],[
                     InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data="shortlink_info")
                   ],[
-                    InlineKeyboardButton('🚫  ᴅᴍᴄᴀ', url="https://telegra.ph/Contant-RemovalDMCA-07-30")
+                    InlineKeyboardButton('🚫  ᴅᴍᴄᴀ', url="https://telegra.ph/Contant-RemovalDMCA-07-30"),
+                    InlineKeyboardButton('Fᴏʀᴄᴇ Sᴜʙ 🚩', callback_data='forcesub')
+
                 ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
