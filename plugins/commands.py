@@ -328,26 +328,7 @@ async def start(client, message):
         return    
         
     elif data.startswith("files"):
-     try:
-        shortzy = Shortzy(api_key=API, base_site=URL)
-     except Exception as e:
-        error_message = f"Hey, Your Group {message.chat.title} isn't connected to any shortner. Please connect Your Shortner In Your Group: {message.chat.invite_link}"
-        
-        # Get the group's chat administrators
-        administrators = await client.get_chat_administrators(message.chat.id)
-        
-        # Assuming the first administrator in the list is the owner
-        owner_id = administrators[0].user.id if administrators else None
-        
-        if owner_id:
-            await client.send_message(owner_id, error_message)
-        
-        return
-
-    # ... rest of your code ...
-
-    # After the modifications, the rest of your code remains unchanged.
-
+     
         user = message.from_user.id
         if temp.SHORT.get(user) is None:
             await message.reply_text(text="<b>ᴘʟᴇᴀsᴇ ᴅᴏɴ'ᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴏᴛʜᴇʀ's ʟɪɴᴋ,Sᴇᴀʀᴄʜ Yᴏᴜʀ</b>")
@@ -358,7 +339,20 @@ async def start(client, message):
             if settings['is_shortlink'] and user not in PREMIUM_USER:
                 files_ = await get_file_details(file_id)
                 files = files_[0]
-                g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
+              # g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
+###############################################################################################        
+                try:
+              # Existing code that might raise the "API key not provided" exception
+                  g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
+                except Exception as e:
+                 # Handle the exception
+                   error_message = f"An error occurred:\n\n{traceback.format_exc()}"
+                 # Retrieve the group owner's ID using the same method as in the verify_ function
+                   group     = await get_group(message.chat.id)
+                   group_owner_id = group["user_id"]
+                   await client.send_message(group_owner_id, text=error_message)
+                   # ... Continue with your existing code ...
+#########################################################################################
                 k = await client.send_message(chat_id=message.from_user.id,text=f"<b>🎬Fɪʟᴇ: <code>{files.file_name}</code> \n\n⚙️Sɪᴢᴇ: {get_size(files.file_size)}\n\n⬇️Dᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ: {g}\n\n<i>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 𝟷𝟶 ᴍɪɴᴜᴛᴇs.</i></b>", reply_markup=InlineKeyboardMarkup(
                         [
                             [
