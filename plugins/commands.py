@@ -292,7 +292,10 @@ async def start(client, message):
                     f_caption=f_caption
             if f_caption is None:
                 f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
-            if not await check_verification(client, message.from_user.id) and VERIFY == True:
+            #if not await check_verification(client, message.from_user.id) and VERIFY == True:
+            if temp.SHORT.get(user) is not None and not await check_verification(client, message.from_user.id) and VERIFY == True:
+    # Your code logic here
+
                 btn = [[
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
