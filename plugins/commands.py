@@ -328,6 +328,26 @@ async def start(client, message):
         return    
         
     elif data.startswith("files"):
+     try:
+        shortzy = Shortzy(api_key=API, base_site=URL)
+     except Exception as e:
+        error_message = f"Hey, Your Group {message.chat.title} isn't connected to any shortner. Please connect Your Shortner In Your Group: {message.chat.invite_link}"
+        
+        # Get the group's chat administrators
+        administrators = await client.get_chat_administrators(message.chat.id)
+        
+        # Assuming the first administrator in the list is the owner
+        owner_id = administrators[0].user.id if administrators else None
+        
+        if owner_id:
+            await client.send_message(owner_id, error_message)
+        
+        return
+
+    # ... rest of your code ...
+
+    # After the modifications, the rest of your code remains unchanged.
+
         user = message.from_user.id
         if temp.SHORT.get(user) is None:
             await message.reply_text(text="<b>ᴘʟᴇᴀsᴇ ᴅᴏɴ'ᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴏᴛʜᴇʀ's ʟɪɴᴋ,Sᴇᴀʀᴄʜ Yᴏᴜʀ</b>")
