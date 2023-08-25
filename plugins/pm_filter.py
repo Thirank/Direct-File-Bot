@@ -713,6 +713,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
     # link = await client.create_chat_invite_link(int(REQST_CHANNEL))
+    data = query.data
     if query.data == "close_data":
         await query.message.delete()
     elif query.data == "gfiltersdeleteallconfirm":
@@ -1741,7 +1742,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
-    elif query.data.startswith("generate_stream_link"):
+    elif data.startswith("generate_stream_link"):
         _, file_id = data.split(":")
         try:
             user_id = query.from_user.id
