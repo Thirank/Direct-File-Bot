@@ -390,7 +390,11 @@ async def start(client, message):
                     [
                      [
                       InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
-                   ]
+                   ],
+                   
+                     [
+                        InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}'),
+                    ]
                     ]
                 )
             )
@@ -451,6 +455,10 @@ async def start(client, message):
             [
                      [
                       InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
+                     ],
+                     
+                     [
+                      InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}'),
                      ]
             ]
         )
