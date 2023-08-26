@@ -1,49 +1,31 @@
-import logging
-import logging.config
+# import logging
+# import logging.config
 
-# Get logging configurations
-logging.config.fileConfig('logging.conf')
-logging.getLogger().setLevel(logging.INFO)
-logging.getLogger("pyrogram").setLevel(logging.ERROR)
-logging.getLogger("imdbpy").setLevel(logging.ERROR)
-
-#lazydev
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
-logging.getLogger("aiohttp").setLevel(logging.ERROR)
-logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
-import asyncio
-from pyrogram import idle
-from lazybot import LazyPrincessBot
-from util.keepalive import ping_server
-from lazybot.clients import initialize_clients
-
-import sys
-import glob
-import importlib
-from pathlib import Path
-from pyrogram import idle
-from pyrogram import __version__
+# # Get logging configurations
+# logging.config.fileConfig('logging.conf')
+# logging.getLogger().setLevel(logging.INFO)
+# logging.getLogger("pyrogram").setLevel(logging.ERROR)
+# logging.getLogger("imdbpy").setLevel(logging.ERROR)
 
 
-from pyrogram import Client, __version__
-from pyrogram.raw.all import layer
-from database.ia_filterdb import Media
-from database.users_chats_db import db
-#from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL, PORT
-from info import *
-from utils import temp
-from typing import Union, Optional, AsyncGenerator
-from pyrogram import types
-from Script import script 
-from datetime import date, datetime 
-import pytz
-from aiohttp import web
-from plugins import web_server
 
-async def start_services():
+
+# from pyrogram import Client, __version__
+# from pyrogram.raw.all import layer
+# from database.ia_filterdb import Media
+# from database.users_chats_db import db
+# #from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL, PORT
+# from info import *
+# from utils import temp
+# from typing import Union, Optional, AsyncGenerator
+# from pyrogram import types
+# from Script import script 
+# from datetime import date, datetime 
+# import pytz
+# from aiohttp import web
+# from plugins import web_server
+
+# async def start_services():
 # class Bot(Client):
 
 
@@ -128,11 +110,70 @@ async def start_services():
 
 # app = Bot()
 # app.run()
- ppath = "plugins/*.py"
- files = glob.glob(ppath)
- LazyPrincessBot.start()
- loop = asyncio.get_event_loop()
- async def start_services():
+import logging
+import logging.config
+# Credit @LazyDeveloper.
+# Please Don't remove credit.
+# Born to make history @LazyDeveloper !
+# Thank you LazyDeveloper for helping us in this Journey
+# 🥰  Thank you for giving me credit @LazyDeveloperr  🥰
+# for any error please contact me -> telegram@LazyDeveloperr or insta @LazyDeveloperr 
+# rip paid developers 🤣 - >> No need to buy paid source code while @LazyDeveloperr is here 😍😍
+# Get logging configurations
+#########duplicate###########
+from pyrogram import Client, __version__
+from pyrogram.raw.all import layer
+from database.ia_filterdb import Media
+from database.users_chats_db import db
+#from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL, PORT
+from info import *
+from utils import temp
+from typing import Union, Optional, AsyncGenerator
+from pyrogram import types
+from Script import script 
+from datetime import date, datetime 
+import pytz
+from aiohttp import web
+from plugins import web_server
+#########duplicate###########
+
+
+import sys
+import glob
+import importlib
+from pathlib import Path
+from pyrogram import idle
+logging.config.fileConfig('logging.conf')
+logging.getLogger().setLevel(logging.INFO)
+logging.getLogger("pyrogram").setLevel(logging.ERROR)
+logging.getLogger("imdbpy").setLevel(logging.ERROR)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logging.getLogger("aiohttp").setLevel(logging.ERROR)
+logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
+
+from pyrogram import __version__
+from info import *
+
+from aiohttp import web
+from plugins import web_server
+
+import asyncio
+from pyrogram import idle
+from lazybot import LazyPrincessBot
+from util.keepalive import ping_server
+from lazybot.clients import initialize_clients
+
+
+ppath = "plugins/*.py"
+files = glob.glob(ppath)
+LazyPrincessBot.start()
+loop = asyncio.get_event_loop()
+
+
+async def start_services():
     print('\n')
     print('------------------- Initalizing Telegram Bot -------------------')
     bot_info = await LazyPrincessBot.get_me()
@@ -186,4 +227,5 @@ if __name__ == '__main__':
         loop.run_until_complete(start_services())
     except KeyboardInterrupt:
         logging.info('----------------------- Service Stopped -----------------------')
+
 
