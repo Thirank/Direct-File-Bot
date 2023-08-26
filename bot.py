@@ -19,10 +19,7 @@ from pyrogram import idle
 from lazybot import LazyPrincessBot
 from util.keepalive import ping_server
 from lazybot.clients import initialize_clients
-ppath = "plugins/*.py"
-files = glob.glob(ppath)LazyPrincessBot.start()
-LazyPrincessBot.start()
-loop = asyncio.get_event_loop()
+
 import sys
 import glob
 import importlib
@@ -131,7 +128,11 @@ async def start_services():
 
 # app = Bot()
 # app.run()
-async def Lazy_start():
+ ppath = "plugins/*.py"
+ files = glob.glob(ppath)
+ LazyPrincessBot.start()
+ loop = asyncio.get_event_loop()
+ async def start_services():
     print('\n')
     print('------------------- Initalizing Telegram Bot -------------------')
     bot_info = await LazyPrincessBot.get_me()
@@ -185,3 +186,4 @@ if __name__ == '__main__':
         loop.run_until_complete(start_services())
     except KeyboardInterrupt:
         logging.info('----------------------- Service Stopped -----------------------')
+
