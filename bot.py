@@ -19,9 +19,16 @@ from pyrogram import idle
 from lazybot import LazyPrincessBot
 from util.keepalive import ping_server
 from lazybot.clients import initialize_clients
-PORT = "8080"
+ppath = "plugins/*.py"
+files = glob.glob(ppath)LazyPrincessBot.start()
 LazyPrincessBot.start()
 loop = asyncio.get_event_loop()
+import sys
+import glob
+import importlib
+from pathlib import Path
+from pyrogram import idle
+from pyrogram import __version__
 
 
 from pyrogram import Client, __version__
@@ -39,6 +46,7 @@ import pytz
 from aiohttp import web
 from plugins import web_server
 
+async def start_services():
 # class Bot(Client):
 
 
@@ -125,31 +133,55 @@ from plugins import web_server
 # app.run()
 async def Lazy_start():
     print('\n')
-    print(' Initalizing Telegram Bot ')
+    print('------------------- Initalizing Telegram Bot -------------------')
     bot_info = await LazyPrincessBot.get_me()
     LazyPrincessBot.username = bot_info.username
+    print("------------------------------ DONE ------------------------------")
+    print()
+    print(
+        "---------------------- Initializing Clients ----------------------"
+    )
     await initialize_clients()
+    print("------------------------------ DONE ------------------------------")
+    print('\n')
+    print('--------------------------- Importing ---------------------------')
+    for name in files:
+        with open(name) as a:
+            patt = Path(a.name)
+            plugin_name = patt.stem.replace(".py", "")
+            plugins_dir = Path(f"plugins/{plugin_name}.py")
+            import_path = "plugins.{}".format(plugin_name)
+            spec = importlib.util.spec_from_file_location(import_path, plugins_dir)
+            load = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(load)
+            sys.modules["plugins." + plugin_name] = load
+            print("Imported => " + plugin_name)
     if ON_HEROKU:
+        print("------------------ Starting Keep Alive Service ------------------")
+        print()
         asyncio.create_task(ping_server())
-    b_users, b_chats = await db.get_banned()
-    temp.BANNED_USERS = b_users
-    temp.BANNED_CHATS = b_chats
-    await Media.ensure_indexes()
-    me = await LazyPrincessBot.get_me()
-    temp.ME = me.id
-    temp.U_NAME = me.username
-    temp.B_NAME = me.first_name
-    LazyPrincessBot.username = '@' + me.username
+    print('-------------------- Initalizing Web Server -------------------------')
     app = web.AppRunner(await web_server())
     await app.setup()
     bind_address = "0.0.0.0" if ON_HEROKU else BIND_ADRESS
     await web.TCPSite(app, bind_address, PORT).start()
-    logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
-    logging.info(LOG_STR)
+    print('----------------------------- DONE ---------------------------------------------------------------------')
+    print('\n')
+    print('---------------------------------------------------------------------------------------------------------')
+    print('---------------------------------------------------------------------------------------------------------')
+    print('\n')
+    print('----------------------- Service Started -----------------------------------------------------------------')
+    print('                        bot =>> {}'.format((await LazyPrincessBot.get_me()).first_name))
+    print('                        server ip =>> {}:{}'.format(bind_address, PORT))
+    print('                        Owner =>> {}'.format((OWNER_USERNAME)))
+    if ON_HEROKU:
+        print('                        app runnng on =>> {}'.format(FQDN))
+    print('---------------------------------------------------------------------------------------------------------')
+    print('---------------------------------------------------------------------------------------------------------')
     await idle()
 
 if __name__ == '__main__':
     try:
-        loop.run_until_complete(Lazy_start())
+        loop.run_until_complete(start_services())
     except KeyboardInterrupt:
         logging.info('----------------------- Service Stopped -----------------------')
