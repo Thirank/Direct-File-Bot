@@ -80,7 +80,8 @@ class LazyPrincessXBot(Client):
                 yield message
                 current += 1
 
+LazyPrincessBot = LazyPrincessXBot()
+
 multi_clients = {}
 work_loads = {}
 
-LazyPrincessBot = LazyPrincessXBot()
