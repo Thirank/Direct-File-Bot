@@ -22,6 +22,7 @@ from info import (
     CUSTOM_FILE_CAPTION,
     SECOND_SHORTLINK_URL,
     SECOND_SHORTLINK_API,
+    BOT_UNAME,
 )
 from imdb import Cinemagoer
 import asyncio
@@ -836,7 +837,7 @@ async def send_all(bot, userid, files, ident):
                     url=await get_token(
                         bot,
                         userid,
-                        f"https://telegram.me/{temp.U_NAME}?start=",
+                        f"https://telegram.me/{BOT_UNAME}?start=",
                         "send_all",
                     ),
                 ),
@@ -932,7 +933,7 @@ async def get_cap(settings, remaining_seconds, files, query, total_results, sear
     
         cap = f"<b>Hᴇʏ {query.from_user.mention}, Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs ғᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}\n\n</b>"
         for file in files:
-            cap += f"<b>♻️ <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
+            cap += f"<b>♻️ <a href='https://telegram.me/{BOT_UNAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
         return cap
 
 
@@ -958,7 +959,7 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                                     "📤 Dᴏᴡɴʟᴏᴀᴅ 📥",
                                     url=await get_shortlink(
                                         chat_id,
-                                        f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}",
+                                        f"https://telegram.me/{BOT_UNAME}?start=files_{file.file_id}",
                                     ),
                                 )
                             ]
@@ -1007,7 +1008,7 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
         for file in files:
             title = file.file_name
             size = get_size(file.file_size)
-            await bot.send_message(chat_id=userid, text=f"<b>Hᴇʏ ᴛʜᴇʀᴇ {user_name} 👋🏽 \n\n✅ Sᴇᴄᴜʀᴇ ʟɪɴᴋ ᴛᴏ ʏᴏᴜʀ ғɪʟᴇ ʜᴀs sᴜᴄᴄᴇssғᴜʟʟʏ ʙᴇᴇɴ ɢᴇɴᴇʀᴀᴛᴇᴅ ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴅᴏᴡɴʟᴏᴀᴅ ʙᴜᴛᴛᴏɴ\n\n🗃️ Fɪʟᴇ Nᴀᴍᴇ : {title}\n🔖 Fɪʟᴇ Sɪᴢᴇ : {size}</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📤 Dᴏᴡɴʟᴏᴀᴅ 📥", url=await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}"))]])
+            await bot.send_message(chat_id=userid, text=f"<b>Hᴇʏ ᴛʜᴇʀᴇ {user_name} 👋🏽 \n\n✅ Sᴇᴄᴜʀᴇ ʟɪɴᴋ ᴛᴏ ʏᴏᴜʀ ғɪʟᴇ ʜᴀs sᴜᴄᴄᴇssғᴜʟʟʏ ʙᴇᴇɴ ɢᴇɴᴇʀᴀᴛᴇᴅ ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴅᴏᴡɴʟᴏᴀᴅ ʙᴜᴛᴛᴏɴ\n\n🗃️ Fɪʟᴇ Nᴀᴍᴇ : {title}\n🔖 Fɪʟᴇ Sɪᴢᴇ : {size}</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📤 Dᴏᴡɴʟᴏᴀᴅ 📥", url=await get_shortlink(chat_id, f"https://telegram.me/{BOT_UNAME}?start=files_{file.file_id}"))]])
     )
     else:
         for file in files:
