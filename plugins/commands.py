@@ -29,7 +29,6 @@ BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
-    
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
                     InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{BOT_UNAME}?startgroup=true')
@@ -390,14 +389,13 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
-            search = message.text
+            # user_id = query.from_user.id
+            # username =  query.from_user.mention 
 
-            
-
-            log_msg = {
-              "chat_id": LOG_CHANNEL,
-              "file_id": file_id,
-             }
+            log_msg = await client.send_cached_media(
+                chat_id=STREAM_CHANNEL,
+                file_id=file_id,
+            )
             fileName = {quote_plus(get_name(log_msg))}
             lazy_stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
             lazy_download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
@@ -469,10 +467,10 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(btn)
         )
         return
-    log_msg = {
-              "chat_id": LOG_CHANNEL,
-              "file_id": file_id,
-             }
+    log_msg = await client.send_cached_media(
+                chat_id=STREAM_CHANNEL,
+                file_id=file_id,
+            )
     fileName = {quote_plus(get_name(log_msg))}
     lazy_stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
     lazy_download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
@@ -496,7 +494,7 @@ async def start(client, message):
 
                     ]
         )
-    )
+    )   
     del_txxt = await message.reply_text("<b>⚠️ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 5 ᴍɪɴᴜᴛᴇs\n\nᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ғɪʟᴇ sᴏᴍᴇᴡʜᴇʀᴇ ʙᴇғᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ..</b>")
     kaith = msg
     await asyncio.sleep(300)
