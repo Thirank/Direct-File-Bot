@@ -122,7 +122,7 @@ async def pm_text(bot, message):
     )
 
     await bot.send_message(
-        chat_id=LOG_CHANNEL,
+        chat_id=BF_LOGS,
         text=f"<b>#𝐏𝐌_𝐌𝐄𝐒𝐒𝐀𝐆𝐄 Jai Shree Ram 🚩\n\nNᴀᴍᴇ : {user}\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}\n\n</b>",
     )
 @Client.on_callback_query(filters.regex(r"^next"))
