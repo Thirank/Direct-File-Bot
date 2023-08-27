@@ -23,6 +23,7 @@ from info import (
     SECOND_SHORTLINK_URL,
     SECOND_SHORTLINK_API,
     BOT_UNAME,
+    BF_LOGS,
 )
 from imdb import Cinemagoer
 import asyncio
@@ -785,7 +786,7 @@ async def check_token(bot, userid, token):
     if not await db.is_user_exist(user.id):
         await db.add_user(user.id, user.first_name)
         await bot.send_message(
-            LOG_CHANNEL, script.LOG_TEXT_P.format(user.id, user.mention)
+            BF_LOGS, script.LOG_TEXT_P.format(user.id, user.mention)
         )
     if user.id in TOKENS.keys():
         TKN = TOKENS[user.id]
@@ -804,7 +805,7 @@ async def get_token(bot, userid, link):
     if not await db.is_user_exist(user.id):
         await db.add_user(user.id, user.first_name)
         await bot.send_message(
-            LOG_CHANNEL, script.LOG_TEXT_P.format(user.id, user.mention)
+            BF_LOGS, script.LOG_TEXT_P.format(user.id, user.mention)
         )
     token = "".join(random.choices(string.ascii_letters + string.digits, k=7))
     TOKENS[user.id] = {token: False}
@@ -901,7 +902,7 @@ async def verify_user(bot, userid, token):
     if not await db.is_user_exist(user.id):
         await db.add_user(user.id, user.first_name)
         await bot.send_message(
-            LOG_CHANNEL, script.LOG_TEXT_P.format(user.id, user.mention)
+            BF_LOGS, script.LOG_TEXT_P.format(user.id, user.mention)
         )
     TOKENS[user.id] = {token: True}
     tz = pytz.timezone("Asia/Kolkata")
@@ -914,7 +915,7 @@ async def check_verification(bot, userid):
     if not await db.is_user_exist(user.id):
         await db.add_user(user.id, user.first_name)
         await bot.send_message(
-            LOG_CHANNEL, script.LOG_TEXT_P.format(user.id, user.mention)
+            BF_LOGS, script.LOG_TEXT_P.format(user.id, user.mention)
         ) 
     tz = pytz.timezone("Asia/Kolkata")
     today = date.today()
