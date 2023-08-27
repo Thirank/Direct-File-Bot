@@ -393,8 +393,12 @@ async def start(client, message):
                    ],
                    
                      [
-                        InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}'),
+                        InlineKeyboardButton('🔻ɢᴇɴ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ⚡', callback_data=f'generate_stream_link:{file_id}'),
+                    ],
+                    [
+                        InlineKeyboardButton('🔻ɢᴇɴ ᴏɴʟɪɴᴇ sᴛʀᴇᴀᴍ ʟɪɴᴋ 👻', callback_data=f'generate_stream_link:{file_id}'),
                     ]
+
                     ]
                 )
             )
@@ -455,12 +459,16 @@ async def start(client, message):
             [
                      [
                       InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{BOT_UNAME}?startgroup=true'),
-                     ],
-                     
+                   ],
+                   
                      [
-                      InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}'),
-                     ]
-            ]
+                        InlineKeyboardButton('🔻ɢᴇɴ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ⚡', callback_data=f'generate_stream_link:{file_id}'),
+                    ],
+                    [
+                        InlineKeyboardButton('🔻ɢᴇɴ ᴏɴʟɪɴᴇ sᴛʀᴇᴀᴍ ʟɪɴᴋ 👻', callback_data=f'generate_stream_link:{file_id}'),
+                    ]
+
+                    ]
         )
     )   
     del_txxt = await message.reply_text("<b>⚠️ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 5 ᴍɪɴᴜᴛᴇs\n\nᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ғɪʟᴇ sᴏᴍᴇᴡʜᴇʀᴇ ʙᴇғᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ..</b>")
