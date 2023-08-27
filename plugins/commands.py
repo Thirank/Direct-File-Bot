@@ -390,7 +390,7 @@ async def start(client, message):
                 )
                 return
             # user_id = query.from_user.id
-            # username =  query.from_user.mention 
+            username =  query.from_user.mention 
 
             log_msg = await client.send_cached_media(
                 chat_id=LOG_CHANNEL,
@@ -418,6 +418,13 @@ async def start(client, message):
 
                     ]
                 )
+            )
+            await log_msg.reply_text(
+                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• File Name : {fileName}",
+                quote=True,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Download", url=lazy_download),  # we download Link
+                                                    InlineKeyboardButton('Stream online', url=lazy_stream)]])  # web stream Link
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
@@ -495,6 +502,13 @@ async def start(client, message):
                     ]
         )
     )   
+    await log_msg.reply_text(
+                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• File Name : {fileName}",
+                quote=True,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Download", url=lazy_download),  # we download Link
+                                                    InlineKeyboardButton('Stream online', url=lazy_stream)]])  # web stream Link
+            )
     del_txxt = await message.reply_text("<b>⚠️ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 5 ᴍɪɴᴜᴛᴇs\n\nᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ғɪʟᴇ sᴏᴍᴇᴡʜᴇʀᴇ ʙᴇғᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ..</b>")
     kaith = msg
     await asyncio.sleep(300)
