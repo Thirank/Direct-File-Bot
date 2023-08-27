@@ -396,7 +396,7 @@ async def start(client, message):
                 chat_id=STREAM_CHANNEL,
                 file_id=file_id,
             )
-            await log_msg.reply_text(text=f"name{message.from_user.first_name}")
+            await log_msg.reply_text(text=f"name : {message.from_user.mention}")
             fileName = {quote_plus(get_name(log_msg))}
             lazy_stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
             lazy_download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
@@ -472,7 +472,7 @@ async def start(client, message):
                 chat_id=STREAM_CHANNEL,
                 file_id=file_id,
             )
-    await log_msg.reply_text(text=f"name{message.from_user.first_name}")
+    await log_msg.reply_text(text=f"name : {message.from_user.mention}")
 
     fileName = {quote_plus(get_name(log_msg))}
     lazy_stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
