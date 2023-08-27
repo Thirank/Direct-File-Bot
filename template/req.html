@@ -3,8 +3,6 @@
 <html lang="en">
 
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8307139625739486"
-        crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="https://i.ibb.co/WnT0HLk/20230826-174224.png" type="image/x-icon">
     <meta property="og:image" content="https://i.ibb.co/WnT0HLk/20230826-174224.png" itemprop="thumbnailUrl">
@@ -33,14 +31,16 @@
         <nav class="navbar bg-dark p-lg-4 p-2">
             <div class="d-flex ">
                 <!-- Sidebar Menu -> Open Button--> -->
-                <button
+                <button style="color: #00e5ff;"
                     class="btn border border-danger-subtle wow animate__animated animate__fadeInLeft animate__delay-1s"
                     type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
                     aria-controls="offcanvasWithBothOptions">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff"
-                        class="bi bi-menu-button-wide-fill" viewBox="0 0 16 16">
-                        <path fill="url(#PMWUiMSnUf2R_PPJ6rqZea_44112_gr1)"
-                            d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0h-13zm1 2h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1zm9.927.427A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0l-.396-.396zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-window-sidebar" viewBox="0 0 16 16">
+                        <path
+                            d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
+                        <path
+                            d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v2H1V3a1 1 0 0 1 1-1h12zM1 13V6h4v8H2a1 1 0 0 1-1-1zm5 1V6h9v7a1 1 0 0 1-1 1H6z" />
                     </svg>
                 </button>
                 <!-- sidebar menu -->
@@ -179,11 +179,13 @@
                 <div class="container-fluid">
                     <a class="navbar-brand  text-light fw-bold " href="https://telegram.me/bisal_files">
                         <span
-                            class="bg-clip-text sm:text-[25px] text-[22px] text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+                            class="bg-clip-text sm:text-[25px] text-[22px] text-transparent bg-gradient-to-r from-green-500 to-red-500">
                             Bisal Files
                         </span>
                     </a>
+
                 </div>
+
             </div>
         </nav>
         <!-- ./Navbar -->
@@ -384,10 +386,20 @@
                         </svg>
                         HD Player(4K)
                     </div>
-                    <div onclick="lazyDownload()"
+                    <div onclick="lazyDownload();" oncontextmenu="return false;" onselectstart="return false;"
                         class="col-lg-4 p-2 col-12 rounded-3xl bg-dark text-white text-center align-items-center hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:shadow-md hover:shadow-gray-100 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__rubberBand">
                         Download Now
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const uncopyableElement = document.querySelector(".uncopyable");
+
+                                uncopyableElement.addEventListener("selectstart", function (event) {
+                                    event.preventDefault();
+                                });
+                            });
+                        </script>
                     </div>
+
                 </div>
             </div>
         </div>
