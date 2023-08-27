@@ -99,7 +99,6 @@ TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Movie_Url_link_downloader/17')#
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', 'Kʏᴀ ʀᴇ Bʜɪᴋᴍᴀɴɢᴀ 😑,Kʏᴀ ᴅᴇᴋʜ ʀᴀʜᴀ ʜᴀɪ ?')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-STREAM_CHANNEL = int(environ.get('STREAM_CHANNEL', '-1001933661618'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Movie_Url')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
