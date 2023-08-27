@@ -405,12 +405,15 @@ async def start(client, message):
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=InlineKeyboardMarkup(
                     [
+                        [
+                        InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🚩', url=f'http://t.me/{BOT_UNAME}?startgroup=true'),
+                        ],
                      [
-                        InlineKeyboardButton("web Download", url=lazy_download),                   
+                        InlineKeyboardButton("🔻ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ ⚡", url=lazy_download),                   
                      ],
                    
                      [
-                        InlineKeyboardButton('▶Stream online', url=lazy_stream),                  
+                        InlineKeyboardButton('🔻ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 👻', url=lazy_stream),                  
                      ]
 
                     ]
@@ -478,12 +481,15 @@ async def start(client, message):
         protect_content=True if pre == 'filep' else False,
         reply_markup=InlineKeyboardMarkup(
            [
+                        [
+                        InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🚩', url=f'http://t.me/{BOT_UNAME}?startgroup=true'),
+                        ],
                      [
-                        InlineKeyboardButton("web Download", url=lazy_download),                   
+                        InlineKeyboardButton("🔻ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ ⚡", url=lazy_download),                   
                      ],
                    
                      [
-                        InlineKeyboardButton('▶Stream online', url=lazy_stream),                  
+                        InlineKeyboardButton('🔻ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 👻', url=lazy_stream),                  
                      ]
 
                     ]
