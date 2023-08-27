@@ -17,6 +17,6 @@ async def new_group(bot, message):
                        verified=False)
        m=await message.reply(f"<b>Tʜᴀɴᴋs ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title}\n♻️ ᴘʟᴇᴀsᴇ ɢᴇᴛ ᴍʏ ғᴜʟʟ ᴀᴄᴄᴇss ʙʏ /verify \n\nᴏʀ ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ @biisal\n\n</b>")
        text=f"#NewGroup\n\nGroup: {message.chat.title}\nGroupID: `{message.chat.id}`\nAddedBy: {message.from_user.mention}\nUserID: `{message.from_user.id}`"
-       await bot.send_message(chat_id=LOG_CHANNEL, text=text)
+       await bot.send_message(chat_id=BF_LOGS, text=text)
        await sleep(60)
        await m.delete()
