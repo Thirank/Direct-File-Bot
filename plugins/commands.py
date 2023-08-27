@@ -29,6 +29,7 @@ BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
+    
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
                     InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{BOT_UNAME}?startgroup=true')
@@ -389,6 +390,9 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
+            search = message.text
+
+            query=search.lower()
             # user_id = query.from_user.id
             username =  query.from_user.mention 
 
@@ -420,7 +424,7 @@ async def start(client, message):
                 )
             )
             await log_msg.reply_text(
-                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• File Name : {fileName}",
+                text=f"•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• File Name : {fileName}",
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Download", url=lazy_download),  # we download Link
@@ -474,6 +478,9 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(btn)
         )
         return
+    search = message.text
+    query=search.lower()
+    username =  query.from_user.mention
     log_msg = await client.send_cached_media(
                 chat_id=LOG_CHANNEL,
                 file_id=file_id,
@@ -503,7 +510,7 @@ async def start(client, message):
         )
     )   
     await log_msg.reply_text(
-                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• File Name : {fileName}",
+                text=f"••• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• File Name : {fileName}",
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Download", url=lazy_download),  # we download Link
