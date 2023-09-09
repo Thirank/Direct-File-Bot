@@ -47,9 +47,9 @@ REPO_OWNER = "Biisal"
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_ID = int(environ.get('API_ID', '24081336'))
+API_HASH = environ.get('API_HASH', 'ca055a6b7f2ed170ddafb8bfdb8a3523')
+BOT_TOKEN = environ.get('BOT_TOKEN', "6171783944:AAEuuAOPfOcz-UXtB1wnqLmejT9n15RReGc")
 BOT_UNAME = "DirectFilee_Bot"
 
 # Bot settings
@@ -68,7 +68,7 @@ auth_users = [int(user) if id_pattern.search(user) else user for user in environ
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '5397984467 5944257277').split()]
 auth_channel = environ.get('AUTH_CHANNEL')
-auth_grp = environ.get('AUTH_GROUP')
+auth_grp = environ.get('AUTH_GROUP', '-1001734958816')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1001812797837')
@@ -78,16 +78,16 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://movieurll:movieurll@cluster0.fswss4o.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Bharat")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
-SHORTLINK_API = environ.get('SHORTLINK_API', '')
-SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', '')
-SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', '')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'zxlink.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', '35daca4a9b619adbde5a2198a4552fe274f84b1c')
+SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'zxlink.in')
+SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', '35daca4a9b619adbde5a2198a4552fe274f84b1c')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001905000346').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "20")
@@ -98,7 +98,7 @@ CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/movie_url')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Movie_Url_link_downloader/17')#not added
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', 'Kʏᴀ ʀᴇ Bʜɪᴋᴍᴀɴɢᴀ 😑,Kʏᴀ ᴅᴇᴋʜ ʀᴀʜᴀ ʜᴀɪ ?')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001949498981'))
 BF_LOGS = int(environ.get('BF_LOGS', '-1001933661618'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Movie_Url')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
